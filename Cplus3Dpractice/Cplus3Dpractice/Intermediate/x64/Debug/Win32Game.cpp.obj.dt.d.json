@@ -6,6 +6,7 @@
         "Includes": [
             "c:\\users\\tyler\\desktop\\projectcpluspractice\\cplus3dpractice\\cplus3dpractice\\game.h",
             "c:\\users\\tyler\\desktop\\projectcpluspractice\\cplus3dpractice\\cplus3dpractice\\base.h",
+            "c:\\users\\tyler\\desktop\\projectcpluspractice\\cplus3dpractice\\cplus3dpractice\\core.h",
             "c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\um\\windows.h",
             "c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\shared\\winapifamily.h",
             "c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\shared\\winpackagefamily.h",

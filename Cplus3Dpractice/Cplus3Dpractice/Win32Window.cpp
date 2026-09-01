@@ -2,6 +2,20 @@
 #include <Windows.h>
 #include <stdexcept>
 
+static LRESULT CALLBACK WindowProcedure(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam) {
+	switch (msg) {
+
+	case WM_CLOSE :
+	{
+		//request to terminate the application
+		PostQuitMessage(0);
+		break;
+	}
+	default :
+		return DefWindowProc(hwnd, msg, wparam, lparam);
+	}
+}
+
 
 dx3d::Window::Window(): Base()
 {
@@ -9,7 +23,7 @@ dx3d::Window::Window(): Base()
 	WNDCLASSEX wc{};
 	wc.cbSize = sizeof(WNDCLASSEX);
 	wc.lpszClassName = L"DX3DWindow";
-	wc.lpfnWndProc = DefWindowProc;
+	wc.lpfnWndProc = &WindowProcedure;
 	//this needs to be a pointer to the windclass
 	auto windowClassId = RegisterClassEx(&wc);
 	//we need this rectangle to automatically handle how the window is rendered on screen then pull those variables for when the window is created
