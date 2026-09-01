@@ -16,15 +16,83 @@
     <Filter Include="Game">
       <UniqueIdentifier>{e09d3c98-8a13-4f3b-a4f4-e1c54effa63e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="DX3D">
+      <UniqueIdentifier>{9c54323a-1ec4-4cbd-8a6f-75a01d1b831f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DX3D\Include">
+      <UniqueIdentifier>{a8adce35-0bd8-4fb8-9b4e-1728f6c22e8a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DX3D\Source">
+      <UniqueIdentifier>{bb680f1a-d363-4e62-962d-6e4de445019c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DX3D\Include\DX3D">
+      <UniqueIdentifier>{d03552a2-92a0-4242-b90c-39e2596250bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DX3D\Source\DX3D">
+      <UniqueIdentifier>{8bd5d7ee-2772-4883-94b0-62a087a23d7a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DX3D\Include\DX3D\Core">
+      <UniqueIdentifier>{7dcab986-1433-429d-9568-82d54b03b742}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DX3D\Source\DX3D\Core">
+      <UniqueIdentifier>{ef4b5fa4-6083-4a0e-881a-0e1922e49cf3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DX3D\Include\DX3D\Window">
+      <UniqueIdentifier>{5847a6f7-0c1e-4341-942f-441813f08fe5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DX3D\Source\DX3D\Window">
+      <UniqueIdentifier>{4fc37541-71fd-4016-a53a-881b85594c5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DX3D\Source\DX3D\Window\Win32">
+      <UniqueIdentifier>{f433c896-34a3-44a0-afc5-d23e6696e0d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DX3D\Include\DX3D\Game">
+      <UniqueIdentifier>{d9e10b41-3d42-4803-a398-84c962fd9bf6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DX3D\Source\DX3D\Game">
+      <UniqueIdentifier>{bfbba54b-bcfe-4aaf-ac6d-2e5fbdc174b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DX3D\Source\DX3D\Game\Win32">
+      <UniqueIdentifier>{68c0933f-c9d8-482a-b2f7-ed5ae16d76b2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Base.cpp">
+      <Filter>DX3D\Source\DX3D\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Win32Window.cpp">
+      <Filter>DX3D\Source\DX3D\Window\Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>DX3D\Source\DX3D\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Win32Game.cpp">
+      <Filter>DX3D\Source\DX3D\Game\Win32</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Readme.md">
       <Filter>Game</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Base.h">
+      <Filter>DX3D\Include\DX3D\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Window.h">
+      <Filter>DX3D\Include\DX3D\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>DX3D\Include\DX3D\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Core.h">
+      <Filter>DX3D\Include\DX3D\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="All.h">
+      <Filter>DX3D\Include</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

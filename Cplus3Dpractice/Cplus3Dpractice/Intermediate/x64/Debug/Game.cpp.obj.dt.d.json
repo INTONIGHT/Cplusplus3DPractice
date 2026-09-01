@@ -1,13 +1,13 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "c:\\users\\tyler\\desktop\\projectcpluspractice\\cplus3dpractice\\cplus3dpractice\\main.cpp",
+        "Source": "c:\\users\\tyler\\desktop\\projectcpluspractice\\cplus3dpractice\\cplus3dpractice\\game.cpp",
         "ProvidedModule": "",
         "Includes": [
-            "c:\\users\\tyler\\desktop\\projectcpluspractice\\cplus3dpractice\\cplus3dpractice\\all.h",
             "c:\\users\\tyler\\desktop\\projectcpluspractice\\cplus3dpractice\\cplus3dpractice\\game.h",
             "c:\\users\\tyler\\desktop\\projectcpluspractice\\cplus3dpractice\\cplus3dpractice\\base.h",
-            "c:\\users\\tyler\\desktop\\projectcpluspractice\\cplus3dpractice\\cplus3dpractice\\core.h"
+            "c:\\users\\tyler\\desktop\\projectcpluspractice\\cplus3dpractice\\cplus3dpractice\\core.h",
+            "c:\\users\\tyler\\desktop\\projectcpluspractice\\cplus3dpractice\\cplus3dpractice\\window.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

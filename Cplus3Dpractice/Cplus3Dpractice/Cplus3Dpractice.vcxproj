@@ -73,6 +73,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <OutDir>Bin\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>Intermediate\$(Platform)\$(Configuration)\</IntDir>
+    <IncludePath>DX3D/Include;DX3D/Source;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -144,10 +145,21 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Base.cpp" />
+    <ClCompile Include="Game.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Win32Game.cpp" />
+    <ClCompile Include="Win32Window.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Readme.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="All.h" />
+    <ClInclude Include="Base.h" />
+    <ClInclude Include="Core.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="Window.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

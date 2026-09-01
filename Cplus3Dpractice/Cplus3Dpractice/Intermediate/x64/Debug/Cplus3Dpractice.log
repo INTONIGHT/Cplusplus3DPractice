@@ -1,2 +1,6 @@
-﻿  main.cpp
+﻿  Base.cpp
+  Game.cpp
+  main.cpp
+  Win32Game.cpp
+  Win32Window.cpp
   Cplus3Dpractice.vcxproj -> C:\Users\tyler\Desktop\ProjectCplusPractice\Cplus3Dpractice\Cplus3Dpractice\Bin\x64\Debug\Cplus3Dpractice.exe
