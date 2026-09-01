@@ -55,6 +55,12 @@
     <Filter Include="DX3D\Source\DX3D\Game\Win32">
       <UniqueIdentifier>{68c0933f-c9d8-482a-b2f7-ed5ae16d76b2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="DX3D\Include\DX3D\Graphics">
+      <UniqueIdentifier>{296ad549-7f91-4bb5-bc5d-5bb0fa03d45d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DX3D\Source\DX3D\Graphics">
+      <UniqueIdentifier>{0baca0a7-7b5b-4bb8-87da-aeb153823e0a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -71,6 +77,15 @@
     </ClCompile>
     <ClCompile Include="Win32Game.cpp">
       <Filter>DX3D\Source\DX3D\Game\Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphicsEngine.cpp">
+      <Filter>DX3D\Source\DX3D\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderSystem.cpp">
+      <Filter>DX3D\Source\DX3D\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Logger.cpp">
+      <Filter>DX3D\Source\DX3D\Core</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -93,6 +108,15 @@
     </ClInclude>
     <ClInclude Include="All.h">
       <Filter>DX3D\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphicsEngine.h">
+      <Filter>DX3D\Include\DX3D\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderSystem.h">
+      <Filter>DX3D\Source\DX3D\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Logger.h">
+      <Filter>DX3D\Include\DX3D\Core</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

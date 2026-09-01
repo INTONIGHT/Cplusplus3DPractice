@@ -1,5 +1,6 @@
 #pragma once
 #include "Base.h"
+#include "Core.h"
 
 namespace dx3d {
 
@@ -9,6 +10,9 @@ namespace dx3d {
 	public:
 		GraphicsEngine();
 		virtual ~GraphicsEngine();
+	private:
+		std::unique_ptr<RenderSystem> m_renderSystem{};
+
 	};
 
 }
