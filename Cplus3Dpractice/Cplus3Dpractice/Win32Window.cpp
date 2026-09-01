@@ -19,13 +19,19 @@ static LRESULT CALLBACK WindowProcedure(HWND hwnd, UINT msg, WPARAM wparam, LPAR
 
 dx3d::Window::Window(): Base()
 {
-	//the L before the stream is needed and here we are setting the params for the wndclass
-	WNDCLASSEX wc{};
-	wc.cbSize = sizeof(WNDCLASSEX);
-	wc.lpszClassName = L"DX3DWindow";
-	wc.lpfnWndProc = &WindowProcedure;
-	//this needs to be a pointer to the windclass
-	auto windowClassId = RegisterClassEx(&wc);
+	//creating a lambda function
+	auto registerWindowClassFunction = []() {
+		//the L before the stream is needed and here we are setting the params for the wndclass
+		WNDCLASSEX wc{};
+		wc.cbSize = sizeof(WNDCLASSEX);
+		wc.lpszClassName = L"DX3DWindow";
+		wc.lpfnWndProc = &WindowProcedure;
+		//this needs to be a pointer to the windclass
+		return RegisterClassEx(&wc);
+		};
+
+	static const auto windowClassId = std::invoke(registerWindowClassFunction);
+	
 	//we need this rectangle to automatically handle how the window is rendered on screen then pull those variables for when the window is created
 	if (!windowClassId) {
 		throw std::runtime_error("RegisterClassEx failed");
