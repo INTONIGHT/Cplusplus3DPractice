@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "Intermediate\\x64\\Debug\\RenderSystem.obj",
+            "outputs": [
+                "Intermediate\\x64\\Debug\\RenderSystem.cpp.obj.dt.module.json",
+                "Intermediate\\x64\\Debug\\RenderSystem.cpp.obj.dt.d.json"
+            ],
+            "requires": []
+        }
+    ]
+}
