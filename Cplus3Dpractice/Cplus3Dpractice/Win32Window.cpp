@@ -34,8 +34,7 @@ dx3d::Window::Window(const WindowDesc& desc): Base(desc.base)
 	
 	//we need this rectangle to automatically handle how the window is rendered on screen then pull those variables for when the window is created
 	if (!windowClassId) {
-		getLogger().log(Logger::LogLevel::Error, "RegisterClassEx failed");
-		throw std::runtime_error("RegisterClassEx failed");
+		DX3DLogErrorAndThrow("RegisterClassEx failed");
 	}
 
 	RECT rc{ 0,0,1280,720 };
@@ -47,8 +46,7 @@ dx3d::Window::Window(const WindowDesc& desc): Base(desc.base)
 		NULL, NULL, NULL, NULL);
 
 	if (!m_handle) {
-		getLogger().log(Logger::LogLevel::Error, "CreateWindowEx failed ");
-		throw std::runtime_error("CreateWindowEx failed");
+		DX3DLogErrorAndThrow("CreateWindowEx failed");
 	}
 	ShowWindow(static_cast<HWND>(m_handle), SW_SHOW);
 }

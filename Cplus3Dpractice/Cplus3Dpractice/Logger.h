@@ -17,4 +17,15 @@ namespace dx3d {
 	private:
 		LogLevel m_logLevel = LogLevel::Error;
 	};
+#define DX3DLogError(message)\
+getLogger().log((Logger::LogLevel::Error), message);
+	//this is used to create macros
+	//multi lined macros need a backslash at the end of each line
+#define DX3DLogErrorAndThrow(message)\
+{\
+	DX3DLogError(message);\
+	throw std::runtime_error(message);\
+	}
+
+
 }

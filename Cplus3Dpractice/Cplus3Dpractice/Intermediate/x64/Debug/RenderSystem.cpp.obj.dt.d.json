@@ -368,7 +368,8 @@
             "c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\winrt\\wrl\\event.h",
             "c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\winrt\\eventtoken.h",
             "c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\shared\\pshpack8.h",
-            "c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\shared\\poppack.h"
+            "c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\shared\\poppack.h",
+            "c:\\users\\tyler\\desktop\\projectcpluspractice\\cplus3dpractice\\cplus3dpractice\\graphicslogutils.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

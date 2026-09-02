@@ -1,6 +1,7 @@
 ﻿  Base.cpp
   Game.cpp
   GraphicsEngine.cpp
+  Logger.cpp
   RenderSystem.cpp
   Win32Game.cpp
   Win32Window.cpp
