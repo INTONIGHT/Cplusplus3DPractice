@@ -8,7 +8,7 @@ namespace dx3d {
 	class Game: public Base
 	{
 	public : 
-		Game();
+		explicit Game(const GameDesc& desc);
 		virtual ~Game() override;
 
 		virtual void run() final;

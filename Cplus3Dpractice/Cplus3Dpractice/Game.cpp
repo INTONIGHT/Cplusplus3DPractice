@@ -13,8 +13,8 @@
 
 //we are doing a losely coupled management of the logger with this setup
 
-dx3d::Game::Game():
-	Base({*std::make_unique<Logger>(Logger::LogLevel::Info).release()}),
+dx3d::Game::Game(const GameDesc& desc):
+	Base({*std::make_unique<Logger>(desc.logLevel).release()}),
 	m_loggerPtr(&m_logger)
 {
 	//attribute order matters here as well
