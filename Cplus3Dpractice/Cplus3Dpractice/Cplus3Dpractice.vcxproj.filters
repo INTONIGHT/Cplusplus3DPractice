@@ -118,5 +118,8 @@
     <ClInclude Include="Logger.h">
       <Filter>DX3D\Include\DX3D\Core</Filter>
     </ClInclude>
+    <ClInclude Include="Common.h">
+      <Filter>DX3D\Include\DX3D\Core</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

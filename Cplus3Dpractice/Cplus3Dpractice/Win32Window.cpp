@@ -17,7 +17,7 @@ static LRESULT CALLBACK WindowProcedure(HWND hwnd, UINT msg, WPARAM wparam, LPAR
 }
 
 
-dx3d::Window::Window(): Base()
+dx3d::Window::Window(const WindowDesc& desc): Base(desc.base)
 {
 	//creating a lambda function
 	auto registerWindowClassFunction = []() {
@@ -34,6 +34,7 @@ dx3d::Window::Window(): Base()
 	
 	//we need this rectangle to automatically handle how the window is rendered on screen then pull those variables for when the window is created
 	if (!windowClassId) {
+		getLogger().log(Logger::LogLevel::Error, "RegisterClassEx failed");
 		throw std::runtime_error("RegisterClassEx failed");
 	}
 
@@ -46,6 +47,7 @@ dx3d::Window::Window(): Base()
 		NULL, NULL, NULL, NULL);
 
 	if (!m_handle) {
+		getLogger().log(Logger::LogLevel::Error, "CreateWindowEx failed ");
 		throw std::runtime_error("CreateWindowEx failed");
 	}
 	ShowWindow(static_cast<HWND>(m_handle), SW_SHOW);

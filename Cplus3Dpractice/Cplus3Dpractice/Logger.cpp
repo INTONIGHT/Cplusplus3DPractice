@@ -3,7 +3,8 @@
 
 dx3d::Logger::Logger(LogLevel logLevel): m_logLevel(logLevel)
 {
-
+	std::clog << "Tyler | C++ 3D Game" << "\n";
+	std::clog << "----------------------------" << "\n";
 }
 
 void dx3d::Logger::log(LogLevel level, const char* message) const

@@ -11,12 +11,15 @@
 	//auto w = win;
 //end example
 
-dx3d::Game::Game()
+//we are doing a losely coupled management of the logger with this setup
+
+dx3d::Game::Game():
+	Base({*std::make_unique<Logger>(Logger::LogLevel::Info).release()}),
+	m_loggerPtr(&m_logger)
 {
 	//attribute order matters here as well
-	m_loggerPtr = std::make_unique<Logger>(Logger::LogLevel::Info);
-	m_graphicsEngine = std::make_unique<GraphicsEngine>();
-	m_display = std::make_unique<Window>();
+	m_graphicsEngine = std::make_unique<GraphicsEngine>(GraphicsEngineDesc{m_logger});
+	m_display = std::make_unique<Window>(WindowDesc{m_logger});
 
 	m_loggerPtr->log(Logger::LogLevel::Info, "Game initialized.");
 }

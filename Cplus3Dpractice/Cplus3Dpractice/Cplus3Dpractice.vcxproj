@@ -161,6 +161,7 @@
   <ItemGroup>
     <ClInclude Include="All.h" />
     <ClInclude Include="Base.h" />
+    <ClInclude Include="Common.h" />
     <ClInclude Include="Core.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GraphicsEngine.h" />
