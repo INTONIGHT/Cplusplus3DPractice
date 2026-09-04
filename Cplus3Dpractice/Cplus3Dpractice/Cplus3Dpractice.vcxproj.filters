@@ -121,5 +121,8 @@
     <ClInclude Include="Common.h">
       <Filter>DX3D\Include\DX3D\Core</Filter>
     </ClInclude>
+    <ClInclude Include="GraphicsLogUtils.h">
+      <Filter>DX3D\Source\DX3D\Graphics</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

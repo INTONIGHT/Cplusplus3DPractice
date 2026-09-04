@@ -13,4 +13,10 @@ namespace dx3d {
 	class RenderSystem;
 
 	class Logger;
+
+	//for our entire namespace we can use these substitutions
+	using i32 = int;
+	using ui32 = unsigned int;
+	using f32 = float;
+	using d64 = double;
 }

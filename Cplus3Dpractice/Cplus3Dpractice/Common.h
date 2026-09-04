@@ -16,6 +16,11 @@ namespace dx3d {
 	struct RenderSystemDesc {
 		BaseDesc base;
 	};
+	struct SwapChainDesc {
+
+	};
+
+
 	struct GameDesc {
 		Logger::LogLevel logLevel = Logger::LogLevel::Error;
 	};
