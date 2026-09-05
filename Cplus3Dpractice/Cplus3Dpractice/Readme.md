@@ -12,6 +12,7 @@ header files will be going in the include folder whereas the source folder will 
 on methods that are unimplemented you can right click them and select create declaration/definition to create an empty shell method.
 under vc++directories under include directories make sure you edit to include DX3D/Include and DX3D/Source and apply the changes to the project.
 you want all the rendersystem stuff in source so that its not exposed in the public API
-in the project properties under linker -> input additional input add the library d3d11.lib and apply those changes
+in the project properties under linker -> input additional input add the library d3d11.lib and apply those changes.
+ensure that in properties under c/c++ under preprocessor definitions you use NOMINMAX for the max function thats used in swap chain or other places
 </BODY>
 </HTML>

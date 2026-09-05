@@ -2,6 +2,8 @@
 #include "Base.h"
 #include <d3d11.h>
 #include "Common.h"
+#include <wrl.h>
+#include "GraphicsLogUtils.h"
 
 namespace dx3d {
 
@@ -15,7 +17,7 @@ namespace dx3d {
 	{
 	public:
 		explicit GraphicsResource(const GraphicsResourceDesc& desc): 
-			Base(desc.base) , 
+			Base(desc.base),
 			m_device(desc.device),
 			m_factory(desc.factory)
 		{

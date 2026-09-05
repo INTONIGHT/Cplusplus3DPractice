@@ -4,6 +4,7 @@
 #include <wrl.h>
 #include "Core.h"
 #include "Common.h"
+#include "GraphicsResource.h"
 
 namespace dx3d {
 
@@ -13,6 +14,10 @@ namespace dx3d {
 	public:
 		explicit RenderSystem(const RenderSystemDesc& desc);
 		virtual ~RenderSystem() override;
+
+		SwapChainPtr createSwapChain(const SwapChainDesc& desc);
+	private:
+		GraphicsResourceDesc getGraphicsResourceDesc();
 	private:
 		//there is a chain that starts with the id3d11 device which is a high level rendering device
 		//the idxgidevice is a graphics device bound to the gpu

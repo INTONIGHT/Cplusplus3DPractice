@@ -108,6 +108,7 @@
             "c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\ucrt\\time.h",
             "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\xatomic_wait.h",
             "c:\\users\\tyler\\desktop\\projectcpluspractice\\cplus3dpractice\\cplus3dpractice\\logger.h",
+            "c:\\users\\tyler\\desktop\\projectcpluspractice\\cplus3dpractice\\cplus3dpractice\\rect.h",
             "c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\um\\d3d11.h",
             "c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\shared\\rpc.h",
             "c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\um\\windows.h",
@@ -367,7 +368,9 @@
             "c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\winrt\\wrl\\event.h",
             "c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\winrt\\eventtoken.h",
             "c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\shared\\pshpack8.h",
-            "c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\shared\\poppack.h"
+            "c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\shared\\poppack.h",
+            "c:\\users\\tyler\\desktop\\projectcpluspractice\\cplus3dpractice\\cplus3dpractice\\graphicsresource.h",
+            "c:\\users\\tyler\\desktop\\projectcpluspractice\\cplus3dpractice\\cplus3dpractice\\graphicslogutils.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

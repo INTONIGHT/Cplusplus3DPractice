@@ -61,6 +61,9 @@
     <Filter Include="DX3D\Source\DX3D\Graphics">
       <UniqueIdentifier>{0baca0a7-7b5b-4bb8-87da-aeb153823e0a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="DX3D\Include\Math">
+      <UniqueIdentifier>{2206bc55-70f7-4e12-b2ea-3ac5e6426c90}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -86,6 +89,12 @@
     </ClCompile>
     <ClCompile Include="Logger.cpp">
       <Filter>DX3D\Source\DX3D\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="SwapChain.cpp">
+      <Filter>DX3D\Source\DX3D\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Display.cpp">
+      <Filter>DX3D\Source\DX3D\Game</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -123,6 +132,18 @@
     </ClInclude>
     <ClInclude Include="GraphicsLogUtils.h">
       <Filter>DX3D\Source\DX3D\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="SwapChain.h">
+      <Filter>DX3D\Source\DX3D\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphicsResource.h">
+      <Filter>DX3D\Source\DX3D\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Rect.h">
+      <Filter>DX3D\Include\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Display.h">
+      <Filter>DX3D\Include\DX3D\Game</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

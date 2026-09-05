@@ -17,7 +17,7 @@ static LRESULT CALLBACK WindowProcedure(HWND hwnd, UINT msg, WPARAM wparam, LPAR
 }
 
 
-dx3d::Window::Window(const WindowDesc& desc): Base(desc.base)
+dx3d::Window::Window(const WindowDesc& desc): Base(desc.base) , m_size(desc.size)
 {
 	//creating a lambda function
 	auto registerWindowClassFunction = []() {
@@ -37,7 +37,7 @@ dx3d::Window::Window(const WindowDesc& desc): Base(desc.base)
 		DX3DLogErrorAndThrow("RegisterClassEx failed");
 	}
 
-	RECT rc{ 0,0,1280,720 };
+	RECT rc{ 0,0,m_size.width,m_size.height };
 	AdjustWindowRect(&rc, WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU, false);
 	//create a window with specific params
 	m_handle = CreateWindowEx(NULL, MAKEINTATOM(windowClassId), L"Title here | C++ 3D game",

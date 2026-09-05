@@ -2,6 +2,7 @@
 #include "Window.h"
 #include "GraphicsEngine.h"
 #include "Logger.h"
+#include "Display.h"
 
 //the following code block is an example of what NOT to do
 //shallow copy of object underlining sources avoid this
@@ -19,7 +20,8 @@ dx3d::Game::Game(const GameDesc& desc):
 {
 	//attribute order matters here as well
 	m_graphicsEngine = std::make_unique<GraphicsEngine>(GraphicsEngineDesc{m_logger});
-	m_display = std::make_unique<Window>(WindowDesc{m_logger});
+	//using dependency injection pattern here
+	m_display = std::make_unique<Display>(DisplayDesc{ {m_logger, {1280,720}}, m_graphicsEngine->getRenderSystem()});
 
 	DX3DLogInfo("Game initialized.");
 }

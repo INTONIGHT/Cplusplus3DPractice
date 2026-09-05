@@ -11,8 +11,9 @@ namespace dx3d {
 		explicit Window(const WindowDesc& desc);
 		virtual ~Window() override;
 
-	private :
+	protected :
 		//dont want to give wplatform specific definitions such as the api stuff
 		void* m_handle{};
+		Rect m_size{};
 	};
 }

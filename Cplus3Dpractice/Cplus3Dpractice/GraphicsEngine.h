@@ -10,6 +10,8 @@ namespace dx3d {
 	public:
 		explicit GraphicsEngine(const GraphicsEngineDesc& desc);
 		virtual ~GraphicsEngine();
+
+		RenderSystem& getRenderSystem() const noexcept;
 	private:
 		std::unique_ptr<RenderSystem> m_renderSystem{};
 

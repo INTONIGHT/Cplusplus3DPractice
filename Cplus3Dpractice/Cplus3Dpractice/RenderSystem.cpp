@@ -1,5 +1,9 @@
 #include "RenderSystem.h"
 #include "GraphicsLogUtils.h"
+#include "SwapChain.h"
+using namespace dx3d;
+//note its not always ideal to use using namespace especially in header files it can cause name collisions
+//only do using namespace in .cpp files
 
 
 
@@ -36,4 +40,14 @@ dx3d::RenderSystem::RenderSystem(const RenderSystemDesc& desc): Base(desc.base)
 
 dx3d::RenderSystem::~RenderSystem()
 {
+}
+
+SwapChainPtr dx3d::RenderSystem::createSwapChain(const SwapChainDesc& desc)
+{
+	return std::make_shared<SwapChain>(desc,getGraphicsResourceDesc());
+}
+
+GraphicsResourceDesc dx3d::RenderSystem::getGraphicsResourceDesc()
+{
+	return { {m_logger}, *m_d3dDevice.Get() , *m_dxgiFactory.Get() };
 }
