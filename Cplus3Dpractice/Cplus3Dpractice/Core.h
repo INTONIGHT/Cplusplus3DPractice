@@ -15,6 +15,7 @@ namespace dx3d {
 	class Logger;
 	class SwapChain;
 	class Display;
+	class DeviceContext;
 
 	//for our entire namespace we can use these substitutions
 	using i32 = int;
@@ -24,4 +25,5 @@ namespace dx3d {
 
 	//how many pointers are referencing the same object only destroyed when last pointer is destroyed or reset
 	using SwapChainPtr = std::shared_ptr<SwapChain>;
+	using DeviceContextPtr = std::shared_ptr<DeviceContext>;
 }

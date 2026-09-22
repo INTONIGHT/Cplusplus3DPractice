@@ -25,7 +25,17 @@ dx3d::SwapChain::SwapChain(const SwapChainDesc& desc, const GraphicsResourceDesc
 	dxgiDesc.SwapEffect = DXGI_SWAP_EFFECT_DISCARD;
 	dxgiDesc.Windowed = TRUE;
 	// m_swapChain.GetAddressOf() is another option
-	DX3DGraphicsLogErrorAndThrow(m_factory.CreateSwapChain(&m_device, &dxgiDesc, &m_swapChain),
+	DX3DGraphicsLogThrowOnFail(m_factory.CreateSwapChain(&m_device, &dxgiDesc, &m_swapChain),
 		"CreateSwapChain method failed");
+}
+
+void dx3d::SwapChain::reloadBuffers()
+{
+	Microsoft::WRL::ComPtr<ID3D11Texture2D> buffer{};
+	DX3DGraphicsLogThrowOnFail(m_swapChain->GetBuffer(0, IID_PPV_ARGS(&buffer)),
+		"GetBuffer method failed");
+	//default view for the nullptr
+	DX3DGraphicsLogThrowOnFail(m_device.CreateRenderTargetView(buffer.Get(),nullptr,&m_rtv),
+		"CreateRenderTargetView failed");
 }
 

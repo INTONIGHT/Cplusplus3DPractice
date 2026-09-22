@@ -4,7 +4,7 @@
 
 
 namespace dx3d {
-#define DX3DGraphicsLogErrorAndThrow(hr,message)\
+#define DX3DGraphicsLogThrowOnFail(hr,message)\
 {\
 	auto res = (hr);\
 	if (FAILED(res)) {\

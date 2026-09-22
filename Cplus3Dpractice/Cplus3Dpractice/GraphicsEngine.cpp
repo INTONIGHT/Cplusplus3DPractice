@@ -1,5 +1,6 @@
 #include "GraphicsEngine.h"
 #include "GraphicsDevice.h"
+#include "DeviceContext.h"
 using namespace dx3d;
 
 dx3d::GraphicsEngine::GraphicsEngine(const GraphicsEngineDesc& desc): Base(desc.base)
@@ -14,6 +15,9 @@ dx3d::GraphicsEngine::GraphicsEngine(const GraphicsEngineDesc& desc): Base(desc.
 		}
 	}*/
 	m_graphicsDevice = std::make_shared<GraphicsDevice>(GraphicsDeviceDesc{m_logger});
+
+	auto& device = *m_graphicsDevice;
+	m_deviceContext = device.createDeviceContext();
 }
 
 dx3d::GraphicsEngine::~GraphicsEngine()
@@ -23,4 +27,13 @@ dx3d::GraphicsEngine::~GraphicsEngine()
 GraphicsDevice& dx3d::GraphicsEngine::getGraphicsDevice() const noexcept
 {
 	return *m_graphicsDevice;
+}
+
+void dx3d::GraphicsEngine::render(SwapChain& swapChain)
+{
+	auto& context = *m_deviceContext;
+	//setting to red
+	context.clearAndSetBackBuffer(swapChain, { 1,0,0,1 });
+
+
 }
