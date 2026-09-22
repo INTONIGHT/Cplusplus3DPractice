@@ -9,15 +9,15 @@
 namespace dx3d {
 
 
-	class RenderSystem final : public Base
+	class RenderSystem final : public Base, public std::enable_shared_from_this<RenderSystem>
 	{
 	public:
 		explicit RenderSystem(const RenderSystemDesc& desc);
 		virtual ~RenderSystem() override;
 
-		SwapChainPtr createSwapChain(const SwapChainDesc& desc);
+		SwapChainPtr createSwapChain(const SwapChainDesc& desc) const;
 	private:
-		GraphicsResourceDesc getGraphicsResourceDesc();
+		GraphicsResourceDesc getGraphicsResourceDesc() const noexcept;
 	private:
 		//there is a chain that starts with the id3d11 device which is a high level rendering device
 		//the idxgidevice is a graphics device bound to the gpu

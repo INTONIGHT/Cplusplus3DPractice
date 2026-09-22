@@ -24,7 +24,7 @@ dx3d::SwapChain::SwapChain(const SwapChainDesc& desc, const GraphicsResourceDesc
 	dxgiDesc.SampleDesc.Count = 1;
 	dxgiDesc.SwapEffect = DXGI_SWAP_EFFECT_DISCARD;
 	dxgiDesc.Windowed = TRUE;
-	// m_swapChain.GetAddressOf()
+	// m_swapChain.GetAddressOf() is another option
 	DX3DGraphicsLogErrorAndThrow(m_factory.CreateSwapChain(&m_device, &dxgiDesc, &m_swapChain),
 		"CreateSwapChain method failed");
 }
