@@ -11,6 +11,7 @@ namespace dx3d {
 
 
 	private :
+		//TODO figure out why this isnt working right
 		SwapChainPtr m_swapChain{};
 	};
 }

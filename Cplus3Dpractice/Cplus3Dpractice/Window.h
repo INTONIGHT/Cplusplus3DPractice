@@ -12,7 +12,7 @@ namespace dx3d {
 		virtual ~Window() override;
 
 	protected :
-		//dont want to give wplatform specific definitions such as the api stuff
+		//dont want to give platform specific definitions such as the api stuff
 		void* m_handle{};
 		Rect m_size{};
 	};

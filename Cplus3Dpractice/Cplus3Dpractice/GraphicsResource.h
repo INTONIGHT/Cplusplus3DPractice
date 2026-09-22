@@ -1,9 +1,10 @@
 #pragma once
-#include "Base.h"
-#include <d3d11.h>
 #include "Common.h"
-#include <wrl.h>
+#include "Base.h"
 #include "GraphicsLogUtils.h"
+#include <d3d11.h>
+#include <wrl.h>
+#include "Display.h"
 
 namespace dx3d {
 

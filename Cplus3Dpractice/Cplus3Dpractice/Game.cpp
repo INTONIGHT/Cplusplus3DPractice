@@ -22,6 +22,7 @@ dx3d::Game::Game(const GameDesc& desc):
 	m_graphicsEngine = std::make_unique<GraphicsEngine>(GraphicsEngineDesc{m_logger});
 	//using dependency injection pattern here
 	m_display = std::make_unique<Display>(DisplayDesc{ {m_logger, {1280,720}}, m_graphicsEngine->getRenderSystem()});
+	
 
 	DX3DLogInfo("Game initialized.");
 }

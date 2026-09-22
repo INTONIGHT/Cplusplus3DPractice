@@ -35,7 +35,7 @@ dx3d::RenderSystem::RenderSystem(const RenderSystemDesc& desc): Base(desc.base)
 	DX3DGraphicsLogErrorAndThrow(m_dxgiAdapter->GetParent(IID_PPV_ARGS(&m_dxgiFactory)),
 		"GetParent failed to retrieve IDXGIFactory");
 
-
+	
 }
 
 dx3d::RenderSystem::~RenderSystem()
