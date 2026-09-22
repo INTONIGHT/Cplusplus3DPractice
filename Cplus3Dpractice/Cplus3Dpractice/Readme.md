@@ -11,7 +11,7 @@ in your IDE you can click local windows debugger to run the program if it runs w
 header files will be going in the include folder whereas the source folder will contain the actual classes.
 on methods that are unimplemented you can right click them and select create declaration/definition to create an empty shell method.
 under vc++directories under include directories make sure you edit to include DX3D/Include and DX3D/Source and apply the changes to the project.
-you want all the rendersystem stuff in source so that its not exposed in the public API
+you want all the GraphicsDevice stuff in source so that its not exposed in the public API
 in the project properties under linker -> input additional input add the library d3d11.lib and apply those changes.
 ensure that in properties under c/c++ under preprocessor definitions you use NOMINMAX for the max function thats used in swap chain or other places.
 if you need the github copilot to assist you need to go to extensions and disable it

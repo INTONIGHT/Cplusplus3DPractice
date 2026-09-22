@@ -84,7 +84,7 @@
     <ClCompile Include="GraphicsEngine.cpp">
       <Filter>DX3D\Source\DX3D\Graphics</Filter>
     </ClCompile>
-    <ClCompile Include="RenderSystem.cpp">
+    <ClCompile Include="GraphicsDevice.cpp">
       <Filter>DX3D\Source\DX3D\Graphics</Filter>
     </ClCompile>
     <ClCompile Include="Logger.cpp">
@@ -118,10 +118,7 @@
     <ClInclude Include="All.h">
       <Filter>DX3D\Include</Filter>
     </ClInclude>
-    <ClInclude Include="GraphicsEngine.h">
-      <Filter>DX3D\Include\DX3D\Graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="RenderSystem.h">
+    <ClInclude Include="GraphicsDevice.h">
       <Filter>DX3D\Source\DX3D\Graphics</Filter>
     </ClInclude>
     <ClInclude Include="Logger.h">
@@ -144,6 +141,9 @@
     </ClInclude>
     <ClInclude Include="Display.h">
       <Filter>DX3D\Include\DX3D\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphicsEngine.h">
+      <Filter>DX3D\Source\DX3D\Graphics</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

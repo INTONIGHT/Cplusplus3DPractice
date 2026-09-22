@@ -14,12 +14,12 @@ namespace dx3d {
 	};
 	struct DisplayDesc {
 		WindowDesc window;
-		RenderSystem& renderSystem;
+		GraphicsDevice& graphicsDevice;
 	};
 	struct GraphicsEngineDesc {
 		BaseDesc base;
 	};
-	struct RenderSystemDesc {
+	struct GraphicsDeviceDesc {
 		BaseDesc base;
 	};
 	struct SwapChainDesc {

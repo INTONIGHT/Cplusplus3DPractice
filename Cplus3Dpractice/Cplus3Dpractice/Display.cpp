@@ -1,7 +1,7 @@
 #include "Display.h"
-#include "RenderSystem.h"
+#include "GraphicsDevice.h"
 
 dx3d::Display::Display(const DisplayDesc& desc): Window(desc.window)
 {
-	m_swapChain = desc.renderSystem.createSwapChain({ m_handle, m_size });
+	m_swapChain = desc.graphicsDevice.createSwapChain({ m_handle, m_size });
 }

@@ -152,7 +152,7 @@
     <ClCompile Include="GraphicsEngine.cpp" />
     <ClCompile Include="Logger.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="RenderSystem.cpp" />
+    <ClCompile Include="GraphicsDevice.cpp" />
     <ClCompile Include="SwapChain.cpp" />
     <ClCompile Include="Win32Game.cpp" />
     <ClCompile Include="Win32Window.cpp" />
@@ -172,7 +172,7 @@
     <ClInclude Include="GraphicsResource.h" />
     <ClInclude Include="Logger.h" />
     <ClInclude Include="Rect.h" />
-    <ClInclude Include="RenderSystem.h" />
+    <ClInclude Include="GraphicsDevice.h" />
     <ClInclude Include="SwapChain.h" />
     <ClInclude Include="Window.h" />
   </ItemGroup>

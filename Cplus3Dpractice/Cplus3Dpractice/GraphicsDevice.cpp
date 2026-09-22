@@ -1,4 +1,4 @@
-#include "RenderSystem.h"
+#include "GraphicsDevice.h"
 #include "GraphicsLogUtils.h"
 #include "SwapChain.h"
 using namespace dx3d;
@@ -7,7 +7,7 @@ using namespace dx3d;
 
 
 
-dx3d::RenderSystem::RenderSystem(const RenderSystemDesc& desc): Base(desc.base)
+dx3d::GraphicsDevice::GraphicsDevice(const GraphicsDeviceDesc& desc): Base(desc.base)
 {
 	D3D_FEATURE_LEVEL featureLevel{};
 
@@ -38,16 +38,16 @@ dx3d::RenderSystem::RenderSystem(const RenderSystemDesc& desc): Base(desc.base)
 	
 }
 
-dx3d::RenderSystem::~RenderSystem()
+dx3d::GraphicsDevice::~GraphicsDevice()
 {
 }
 
-SwapChainPtr dx3d::RenderSystem::createSwapChain(const SwapChainDesc& desc) const
+SwapChainPtr dx3d::GraphicsDevice::createSwapChain(const SwapChainDesc& desc) const
 {
 	return std::make_shared<SwapChain>(desc,getGraphicsResourceDesc());
 }
 
-GraphicsResourceDesc dx3d::RenderSystem::getGraphicsResourceDesc() const noexcept
+GraphicsResourceDesc dx3d::GraphicsDevice::getGraphicsResourceDesc() const noexcept
 {
 	return { {m_logger},shared_from_this(), *m_d3dDevice.Get() , *m_dxgiFactory.Get() };
 }
