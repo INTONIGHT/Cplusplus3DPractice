@@ -16,6 +16,8 @@ void dx3d::Game::run()
 			DispatchMessage(&msg);
 		}
 		//do this to stop unnecessary speed usage
-		Sleep(1);
+		onInternalUpdate();
 	}
 }
+
+

@@ -12,6 +12,8 @@ namespace dx3d {
 		virtual ~Game() override;
 
 		virtual void run() final;
+	private:
+		void onInternalUpdate();
 	private :
 		//order is important HERE!!!!!!! last defined attribute is first to be deallocated
 		std::unique_ptr<Logger> m_loggerPtr{};

@@ -27,6 +27,8 @@ dx3d::SwapChain::SwapChain(const SwapChainDesc& desc, const GraphicsResourceDesc
 	// m_swapChain.GetAddressOf() is another option
 	DX3DGraphicsLogThrowOnFail(m_factory.CreateSwapChain(&m_device, &dxgiDesc, &m_swapChain),
 		"CreateSwapChain method failed");
+
+	reloadBuffers();
 }
 
 void dx3d::SwapChain::present(bool vsync)
