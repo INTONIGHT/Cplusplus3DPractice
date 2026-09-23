@@ -26,7 +26,20 @@ namespace dx3d {
 		void* winHandle{};
 		Rect winSize{};
 	};
+	enum class ShaderType {
+		VertexShader = 0,
+		PixelShader
+	 };
 
+	struct ShaderCompilerDesc {
+		//aBI safe application binary interface-> memory allocation size across compilers
+		//this is important for shaders 
+		const char* shaderSourceName{};
+		const char* shaderSourceCode{};
+		size_t shaderSourceCodeSize{};
+		const char* shaderEntryPoint{};
+		ShaderType shaderType{};
+	};
 
 	struct GameDesc {
 		Logger::LogLevel logLevel = Logger::LogLevel::Error;
