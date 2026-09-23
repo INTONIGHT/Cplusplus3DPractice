@@ -29,6 +29,13 @@ dx3d::SwapChain::SwapChain(const SwapChainDesc& desc, const GraphicsResourceDesc
 		"CreateSwapChain method failed");
 }
 
+void dx3d::SwapChain::present(bool vsync)
+{
+	//0 for first param can cause issues 1 can make it 60fps 2 makes it 30fps as you increase value it lowers fps
+	DX3DGraphicsLogThrowOnFail(m_swapChain->Present(vsync, 0),
+		"m_swapChain->Present method failed");
+}
+
 void dx3d::SwapChain::reloadBuffers()
 {
 	Microsoft::WRL::ComPtr<ID3D11Texture2D> buffer{};

@@ -9,6 +9,9 @@ namespace dx3d {
 	{
 	public :
 		SwapChain(const SwapChainDesc& desc,const GraphicsResourceDesc& gDesc);
+
+		//vsync is used to synchronize frame rate with monitor ensures frames are displayed smoothly
+		void present(bool vsync = false);
 	private:
 		void reloadBuffers();
 	private :

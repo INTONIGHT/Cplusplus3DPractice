@@ -1,6 +1,8 @@
 #include "GraphicsEngine.h"
 #include "GraphicsDevice.h"
 #include "DeviceContext.h"
+#include "SwapChain.h"
+
 using namespace dx3d;
 
 dx3d::GraphicsEngine::GraphicsEngine(const GraphicsEngineDesc& desc): Base(desc.base)
@@ -35,5 +37,8 @@ void dx3d::GraphicsEngine::render(SwapChain& swapChain)
 	//setting to red
 	context.clearAndSetBackBuffer(swapChain, { 1,0,0,1 });
 
+	auto& device = *m_graphicsDevice;
+	device.executeCommandList(context);
+	swapChain.present();
 
 }

@@ -54,6 +54,16 @@ DeviceContextPtr dx3d::GraphicsDevice::createDeviceContext()
 	return std::make_shared<DeviceContext>(getGraphicsResourceDesc());
 }
 
+void dx3d::GraphicsDevice::executeCommandList(DeviceContext& context)
+{
+	Microsoft::WRL::ComPtr<ID3D11CommandList> list{};
+	//restores state with teh bool flag
+	DX3DGraphicsLogThrowOnFail(context.m_context->FinishCommandList(false, &list),
+		"context.m_context->FinishCommandList failed");
+	//for effeciency pass false
+	m_d3dContext->ExecuteCommandList(list.Get(), false);
+}
+
 GraphicsResourceDesc dx3d::GraphicsDevice::getGraphicsResourceDesc() const noexcept
 {
 	return { {m_logger},shared_from_this(), *m_d3dDevice.Get() , *m_dxgiFactory.Get() };
