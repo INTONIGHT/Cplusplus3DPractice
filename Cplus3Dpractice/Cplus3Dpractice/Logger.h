@@ -14,7 +14,7 @@ namespace dx3d {
 		//follow rule of 0
 		explicit Logger(LogLevel logLevel = LogLevel::Error);
 		~Logger();
-		void log(LogLevel level, const char* message) const;
+		void log(LogLevel level, const char* message);
 	protected:
 		//rule of 5 methods where we implement 5 methods
 		//we prevent it from being copied or moved in any way

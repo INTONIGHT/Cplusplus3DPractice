@@ -13,7 +13,7 @@ namespace dx3d {
 		//virtual is a special type of destructor 
 		virtual ~Base();
 		//function doesnt throw exceptions
-		virtual Logger& getLogger() const noexcept final;
+		virtual Logger& getLogger()  noexcept final;
 	protected:
 		//rule of 5 methods where we implement 5 methods
 		//we prevent it from being copied or moved in any way

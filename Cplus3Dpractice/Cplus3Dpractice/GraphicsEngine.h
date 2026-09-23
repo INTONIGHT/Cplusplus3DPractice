@@ -11,7 +11,7 @@ namespace dx3d {
 		explicit GraphicsEngine(const GraphicsEngineDesc& desc);
 		virtual ~GraphicsEngine();
 
-		GraphicsDevice& getGraphicsDevice() const noexcept;
+		GraphicsDevice& getGraphicsDevice() noexcept;
 
 		void render(SwapChain& swapChain);
 	private:

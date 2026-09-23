@@ -9,7 +9,7 @@ namespace dx3d {
 	public :
 		explicit Display(const DisplayDesc& desc);
 
-		SwapChain& getSwapChain() const noexcept;
+		SwapChain& getSwapChain() noexcept;
 	private :
 		//TODO figure out why this isnt working right
 		SwapChainPtr m_swapChain{};
