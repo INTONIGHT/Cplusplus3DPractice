@@ -39,6 +39,8 @@ dx3d::GraphicsEngine::GraphicsEngine(const GraphicsEngineDesc& desc): Base(desc.
 
 	auto ps = device.compileShader({ shaderSourceName, shaderSourceCode, shaderSourceCodeSize,
 		"PSMain",ShaderType::PixelShader });
+
+	m_pipeline = device.createGraphicsPipelineState({ *vs,*ps });
 }
 
 dx3d::GraphicsEngine::~GraphicsEngine()
@@ -55,6 +57,8 @@ void dx3d::GraphicsEngine::render(SwapChain& swapChain)
 	auto& context = *m_deviceContext;
 	//setting to red
 	context.clearAndSetBackBuffer(swapChain, { 1,0,0,1 });
+	context.setGraphicsPipelineState(*m_pipeline);
+
 
 	auto& device = *m_graphicsDevice;
 	device.executeCommandList(context);

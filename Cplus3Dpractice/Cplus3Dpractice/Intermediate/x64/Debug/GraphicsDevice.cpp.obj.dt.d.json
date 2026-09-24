@@ -377,7 +377,8 @@
             "c:\\users\\tyler\\desktop\\projectcpluspractice\\cplus3dpractice\\cplus3dpractice\\swapchain.h",
             "c:\\users\\tyler\\desktop\\projectcpluspractice\\cplus3dpractice\\cplus3dpractice\\devicecontext.h",
             "c:\\users\\tyler\\desktop\\projectcpluspractice\\cplus3dpractice\\cplus3dpractice\\vec4.h",
-            "c:\\users\\tyler\\desktop\\projectcpluspractice\\cplus3dpractice\\cplus3dpractice\\shaderbinary.h"
+            "c:\\users\\tyler\\desktop\\projectcpluspractice\\cplus3dpractice\\cplus3dpractice\\shaderbinary.h",
+            "c:\\users\\tyler\\desktop\\projectcpluspractice\\cplus3dpractice\\cplus3dpractice\\graphicspipelinestate.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

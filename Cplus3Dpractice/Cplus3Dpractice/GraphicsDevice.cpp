@@ -3,6 +3,7 @@
 #include "SwapChain.h"
 #include "DeviceContext.h"
 #include "ShaderBinary.h"
+#include "GraphicsPipelineState.h"
 
 using namespace dx3d;
 //note its not always ideal to use using namespace especially in header files it can cause name collisions
@@ -58,6 +59,11 @@ DeviceContextPtr dx3d::GraphicsDevice::createDeviceContext()
 ShaderBinaryPtr dx3d::GraphicsDevice::compileShader(const ShaderCompileDesc& desc)
 {
 	return std::make_shared<ShaderBinary>(desc, getGraphicsResourceDesc());
+}
+
+GraphicsPipelineStatePtr dx3d::GraphicsDevice::createGraphicsPipelineState(const GraphicsPipelineStateDesc& desc)
+{
+	return std::make_shared<GraphicsPipelineState>(desc, getGraphicsResourceDesc());
 }
 
 void dx3d::GraphicsDevice::executeCommandList(DeviceContext& context)

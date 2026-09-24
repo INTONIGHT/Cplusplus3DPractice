@@ -17,6 +17,7 @@ namespace dx3d {
 	class Display;
 	class DeviceContext;
 	class ShaderBinary;
+	class GraphicsPipelineState;
 
 
 	//for our entire namespace we can use these substitutions
@@ -29,4 +30,5 @@ namespace dx3d {
 	using SwapChainPtr = std::shared_ptr<SwapChain>;
 	using DeviceContextPtr = std::shared_ptr<DeviceContext>;
 	using ShaderBinaryPtr = std::shared_ptr<ShaderBinary>;
+	using GraphicsPipelineStatePtr = std::shared_ptr<GraphicsPipelineState>;
 }

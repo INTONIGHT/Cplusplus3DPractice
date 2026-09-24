@@ -375,7 +375,8 @@
             "c:\\users\\tyler\\desktop\\projectcpluspractice\\cplus3dpractice\\cplus3dpractice\\display.h",
             "c:\\users\\tyler\\desktop\\projectcpluspractice\\cplus3dpractice\\cplus3dpractice\\window.h",
             "c:\\users\\tyler\\desktop\\projectcpluspractice\\cplus3dpractice\\cplus3dpractice\\vec4.h",
-            "c:\\users\\tyler\\desktop\\projectcpluspractice\\cplus3dpractice\\cplus3dpractice\\swapchain.h"
+            "c:\\users\\tyler\\desktop\\projectcpluspractice\\cplus3dpractice\\cplus3dpractice\\swapchain.h",
+            "c:\\users\\tyler\\desktop\\projectcpluspractice\\cplus3dpractice\\cplus3dpractice\\graphicspipelinestate.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []
