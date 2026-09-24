@@ -2,39 +2,14 @@
   DeviceContext.cpp
   Display.cpp
   Game.cpp
-  GraphicsEngine.cpp
-  Logger.cpp
-  main.cpp
   GraphicsDevice.cpp
+  GraphicsEngine.cpp
+  GraphicsPipelineState.cpp
   ShaderBinary.cpp
   SwapChain.cpp
   Win32Game.cpp
   Win32Window.cpp
+  main.cpp
 C:\Users\tyler\Desktop\ProjectCplusPractice\Cplus3Dpractice\Cplus3Dpractice\main.cpp(17,2): warning C4286: 'const std::invalid_argument &': is caught by base class ('const std::exception &') on line 14
 C:\Users\tyler\Desktop\ProjectCplusPractice\Cplus3Dpractice\Cplus3Dpractice\Win32Window.cpp(17,1): warning C4715: 'WindowProcedure': not all control paths return a value
-C:\Users\tyler\Desktop\ProjectCplusPractice\Cplus3Dpractice\Cplus3Dpractice\ShaderBinary.h(11,16): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-  (compiling source file 'GraphicsDevice.cpp')
-  
-C:\Users\tyler\Desktop\ProjectCplusPractice\Cplus3Dpractice\Cplus3Dpractice\ShaderBinary.h(11,40): error C2143: syntax error: missing ',' before '&'
-  (compiling source file 'GraphicsDevice.cpp')
-  
-C:\Users\tyler\Desktop\ProjectCplusPractice\Cplus3Dpractice\Cplus3Dpractice\ShaderBinary.h(11,16): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-  (compiling source file 'ShaderBinary.cpp')
-  
-C:\Users\tyler\Desktop\ProjectCplusPractice\Cplus3Dpractice\Cplus3Dpractice\ShaderBinary.h(11,40): error C2143: syntax error: missing ',' before '&'
-  (compiling source file 'ShaderBinary.cpp')
-  
-C:\Users\tyler\Desktop\ProjectCplusPractice\Cplus3Dpractice\Cplus3Dpractice\ShaderBinary.cpp(5,34): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-C:\Users\tyler\Desktop\ProjectCplusPractice\Cplus3Dpractice\Cplus3Dpractice\ShaderBinary.cpp(5,58): error C2143: syntax error: missing ',' before '&'
-C:\Users\tyler\Desktop\ProjectCplusPractice\Cplus3Dpractice\Cplus3Dpractice\ShaderBinary.cpp(6,19): error C2065: 'gDesc': undeclared identifier
-C:\Users\tyler\Desktop\ProjectCplusPractice\Cplus3Dpractice\Cplus3Dpractice\ShaderBinary.cpp(8,7): error C2065: 'desc': undeclared identifier
-C:\Users\tyler\Desktop\ProjectCplusPractice\Cplus3Dpractice\Cplus3Dpractice\ShaderBinary.cpp(9,7): error C2065: 'desc': undeclared identifier
-C:\Users\tyler\Desktop\ProjectCplusPractice\Cplus3Dpractice\Cplus3Dpractice\ShaderBinary.cpp(10,7): error C2065: 'desc': undeclared identifier
-C:\Users\tyler\Desktop\ProjectCplusPractice\Cplus3Dpractice\Cplus3Dpractice\ShaderBinary.cpp(11,7): error C2065: 'desc': undeclared identifier
-C:\Users\tyler\Desktop\ProjectCplusPractice\Cplus3Dpractice\Cplus3Dpractice\ShaderBinary.cpp(22,2): error C2065: 'desc': undeclared identifier
-C:\Users\tyler\Desktop\ProjectCplusPractice\Cplus3Dpractice\Cplus3Dpractice\ShaderBinary.cpp(22,2): error C2660: 'D3DCompile': function does not take 7 arguments
-      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\d3dcompiler.h(210,1):
-      see declaration of 'D3DCompile'
-      C:\Users\tyler\Desktop\ProjectCplusPractice\Cplus3Dpractice\Cplus3Dpractice\ShaderBinary.cpp(22,2):
-      while trying to match the argument list '()'
-  
+  Cplus3Dpractice.vcxproj -> C:\Users\tyler\Desktop\ProjectCplusPractice\Cplus3Dpractice\Cplus3Dpractice\Bin\x64\Debug\Cplus3Dpractice.exe

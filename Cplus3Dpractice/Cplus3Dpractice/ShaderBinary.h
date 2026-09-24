@@ -8,8 +8,11 @@ namespace dx3d {
 	class ShaderBinary final: public GraphicsResource
 	{
 	public:
-		ShaderBinary(const ShaderCompilerDesc& desc,const GraphicsResourceDesc& gDesc);
+		ShaderBinary(const ShaderCompileDesc& desc,const GraphicsResourceDesc& gDesc);
+		ShaderBinaryData getData() const noexcept;
+		ShaderType getType() const noexcept;
 	private:
 		Microsoft::WRL::ComPtr<ID3DBlob> m_blob{};
+		ShaderType m_type{};
 	};
 }

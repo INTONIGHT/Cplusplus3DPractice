@@ -99,6 +99,9 @@
     <ClCompile Include="ShaderBinary.cpp">
       <Filter>DX3D\Source\DX3D\Graphics</Filter>
     </ClCompile>
+    <ClCompile Include="GraphicsPipelineState.cpp">
+      <Filter>DX3D\Source\DX3D\Graphics</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Readme.md">
@@ -158,6 +161,9 @@
       <Filter>DX3D\Source\DX3D\Graphics</Filter>
     </ClInclude>
     <ClInclude Include="GraphicsUtils.h">
+      <Filter>DX3D\Source\DX3D\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphicsPipelineState.h">
       <Filter>DX3D\Source\DX3D\Graphics</Filter>
     </ClInclude>
   </ItemGroup>

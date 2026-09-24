@@ -151,6 +151,7 @@
     <ClCompile Include="Display.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GraphicsEngine.cpp" />
+    <ClCompile Include="GraphicsPipelineState.cpp" />
     <ClCompile Include="Logger.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="GraphicsDevice.cpp" />
@@ -172,6 +173,7 @@
     <ClInclude Include="Game.h" />
     <ClInclude Include="GraphicsEngine.h" />
     <ClInclude Include="GraphicsLogUtils.h" />
+    <ClInclude Include="GraphicsPipelineState.h" />
     <ClInclude Include="GraphicsResource.h" />
     <ClInclude Include="GraphicsUtils.h" />
     <ClInclude Include="Logger.h" />

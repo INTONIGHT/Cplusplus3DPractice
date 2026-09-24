@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "Intermediate\\x64\\Debug\\GraphicsPipelineState.obj",
+            "outputs": [
+                "Intermediate\\x64\\Debug\\GraphicsPipelineState.h.obj.dt.module.json",
+                "Intermediate\\x64\\Debug\\GraphicsPipelineState.h.obj.dt.d.json"
+            ],
+            "requires": []
+        }
+    ]
+}
