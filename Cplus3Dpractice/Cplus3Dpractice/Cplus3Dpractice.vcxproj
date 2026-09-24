@@ -154,6 +154,7 @@
     <ClCompile Include="Logger.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="GraphicsDevice.cpp" />
+    <ClCompile Include="ShaderBinary.cpp" />
     <ClCompile Include="SwapChain.cpp" />
     <ClCompile Include="Win32Game.cpp" />
     <ClCompile Include="Win32Window.cpp" />
@@ -172,9 +173,11 @@
     <ClInclude Include="GraphicsEngine.h" />
     <ClInclude Include="GraphicsLogUtils.h" />
     <ClInclude Include="GraphicsResource.h" />
+    <ClInclude Include="GraphicsUtils.h" />
     <ClInclude Include="Logger.h" />
     <ClInclude Include="Rect.h" />
     <ClInclude Include="GraphicsDevice.h" />
+    <ClInclude Include="ShaderBinary.h" />
     <ClInclude Include="SwapChain.h" />
     <ClInclude Include="Vec4.h" />
     <ClInclude Include="Window.h" />

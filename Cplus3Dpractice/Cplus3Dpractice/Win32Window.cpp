@@ -34,7 +34,7 @@ dx3d::Window::Window(const WindowDesc& desc): Base(desc.base) , m_size(desc.size
 	
 	//we need this rectangle to automatically handle how the window is rendered on screen then pull those variables for when the window is created
 	if (!windowClassId) {
-		DX3DLogErrorAndThrow("RegisterClassEx failed");
+		DX3DLogThrowError("RegisterClassEx failed");
 	}
 
 	RECT rc{ 0,0,m_size.width,m_size.height };
@@ -46,7 +46,7 @@ dx3d::Window::Window(const WindowDesc& desc): Base(desc.base) , m_size(desc.size
 		NULL, NULL, NULL, NULL);
 
 	if (!m_handle) {
-		DX3DLogErrorAndThrow("CreateWindowEx failed");
+		DX3DLogThrowError("CreateWindowEx failed");
 	}
 	ShowWindow(static_cast<HWND>(m_handle), SW_SHOW);
 }

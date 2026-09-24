@@ -28,3 +28,18 @@ namespace dx3d {
 		Logger& m_logger;
 	};
 }
+#define DX3DLogError(message)\
+	DX3DLog(getLogger(), Logger::LogLevel::Error, message);
+//this is used to create macros
+//multi lined macros need a backslash at the end of each line
+#define DX3DLogThrowError(message)\
+DX3DLogThrow(getLogger(),std::runtime_error, Logger::LogLevel::Error, message);
+
+#define DX3DLogInfo(message)\
+	DX3DLog(getLogger(), Logger::LogLevel::Info, message)
+
+#define DX3DLogWarning(message)\
+	DX3DLog(getLogger(), Logger::LogLevel::Warning, message)
+
+#define DX3DLogThrowInvalidArg(message)\
+DX3DLogThrow(getLogger(),std::invalid_argument, Logger::LogLevel::Error, message);

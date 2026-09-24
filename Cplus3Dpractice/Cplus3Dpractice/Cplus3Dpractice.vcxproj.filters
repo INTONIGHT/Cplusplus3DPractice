@@ -96,6 +96,9 @@
     <ClCompile Include="DeviceContext.cpp">
       <Filter>DX3D\Source\DX3D\Graphics</Filter>
     </ClCompile>
+    <ClCompile Include="ShaderBinary.cpp">
+      <Filter>DX3D\Source\DX3D\Graphics</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Readme.md">
@@ -150,6 +153,12 @@
     </ClInclude>
     <ClInclude Include="Vec4.h">
       <Filter>DX3D\Include\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderBinary.h">
+      <Filter>DX3D\Source\DX3D\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphicsUtils.h">
+      <Filter>DX3D\Source\DX3D\Graphics</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
