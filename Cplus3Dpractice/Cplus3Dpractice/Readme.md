@@ -15,5 +15,6 @@ you want all the GraphicsDevice stuff in source so that its not exposed in the p
 in the project properties under linker -> input additional input add the library d3d11.lib and apply those changes.
 ensure that in properties under c/c++ under preprocessor definitions you use NOMINMAX for the max function thats used in swap chain or other places.
 if you need the github copilot to assist you need to go to extensions and disable it
+for d3d11 library linking go to properties ->linker-> input-> edit additional dependencies and add d3dcompiler.lib then apply those changes
 </BODY>
 </HTML>

@@ -20,6 +20,25 @@ dx3d::GraphicsEngine::GraphicsEngine(const GraphicsEngineDesc& desc): Base(desc.
 
 	auto& device = *m_graphicsDevice;
 	m_deviceContext = device.createDeviceContext();
+	//using constexpr keyword as it lets the compile calculate at compile time
+	//rho string literal preserves characters as written. you can use R"()" between the () you can write the actual code
+	//within the code blocks the vsmain is the entry point for vertex shaders and ps main is for pixel shader
+	constexpr char shaderSourceCode[] =
+		R"(
+		void VSMain(){
+		}
+		void PSMain(){
+		}
+		)";
+	constexpr char shaderSourceName[] = "Basic";
+	constexpr auto shaderSourceCodeSize = std::size(shaderSourceCode);
+
+	//pass the entry point name as well and the shader type we want to compile
+	auto vs = device.compileShader({shaderSourceName, shaderSourceCode, shaderSourceCodeSize,
+		"VSMain",ShaderType::VertexShader});
+
+	auto ps = device.compileShader({ shaderSourceName, shaderSourceCode, shaderSourceCodeSize,
+		"PSMain",ShaderType::PixelShader });
 }
 
 dx3d::GraphicsEngine::~GraphicsEngine()

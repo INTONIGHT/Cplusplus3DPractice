@@ -31,7 +31,7 @@ namespace dx3d {
 		PixelShader
 	 };
 
-	struct ShaderCompilerDesc {
+	struct ShaderCompileDesc {
 		//aBI safe application binary interface-> memory allocation size across compilers
 		//this is important for shaders 
 		const char* shaderSourceName{};

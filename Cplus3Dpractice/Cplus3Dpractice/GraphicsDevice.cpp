@@ -2,6 +2,7 @@
 #include "GraphicsLogUtils.h"
 #include "SwapChain.h"
 #include "DeviceContext.h"
+#include "ShaderBinary.h"
 
 using namespace dx3d;
 //note its not always ideal to use using namespace especially in header files it can cause name collisions
@@ -52,6 +53,11 @@ SwapChainPtr dx3d::GraphicsDevice::createSwapChain(const SwapChainDesc& desc) co
 DeviceContextPtr dx3d::GraphicsDevice::createDeviceContext()
 {
 	return std::make_shared<DeviceContext>(getGraphicsResourceDesc());
+}
+
+ShaderBinaryPtr dx3d::GraphicsDevice::compileShader(const ShaderCompileDesc& desc)
+{
+	return std::make_shared<ShaderBinary>(desc, getGraphicsResourceDesc());
 }
 
 void dx3d::GraphicsDevice::executeCommandList(DeviceContext& context)
