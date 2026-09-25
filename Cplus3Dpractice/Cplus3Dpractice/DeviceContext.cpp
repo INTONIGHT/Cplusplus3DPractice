@@ -27,6 +27,7 @@ void dx3d::DeviceContext::clearAndSetBackBuffer(const SwapChain& swapChain, cons
 
 void dx3d::DeviceContext::setGraphicsPipelineState(const GraphicsPipelineState& pipeline)
 {
+	m_context->IASetInputLayout(pipeline.m_layout.Get());
 	//binds shader to gpu pipeline basically tell the gpu to use the shader
 	m_context->VSSetShader(pipeline.m_vs.Get(), nullptr, 0);
 	m_context->PSSetShader(pipeline.m_ps.Get(), nullptr, 0);
@@ -40,4 +41,15 @@ void dx3d::DeviceContext::setVertexBuffer(const VertexBuffer& buffer)
 	auto offset = 0u;
 	//how to tell the gpu where the buffer data is stored and interpret it
 	m_context->IASetVertexBuffers(0, 1, &buf, &stride, &offset);
+}
+
+void dx3d::DeviceContext::setViewportSize(const Rect& size)
+{
+	D3D11_VIEWPORT vp{};
+	vp.Width = static_cast<f32>(size.width);
+	vp.Height = static_cast<f32>(size.height);
+	vp.MinDepth = 0.0f;
+	vp.MaxDepth = 1.0f;
+
+	m_context->RSSetViewports(1, &vp);
 }

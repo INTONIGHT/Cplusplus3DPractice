@@ -72,6 +72,8 @@ void dx3d::GraphicsEngine::render(SwapChain& swapChain)
 	//setting to red
 	context.clearAndSetBackBuffer(swapChain, { 1,0,0,1 });
 	context.setGraphicsPipelineState(*m_pipeline);
+
+	context.setViewportSize(swapChain.getSize());
 	//input stage
 	auto& vb = *m_vb;
 	context.setVertexBuffer(vb);
