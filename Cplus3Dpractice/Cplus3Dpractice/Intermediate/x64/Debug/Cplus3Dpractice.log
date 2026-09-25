@@ -1,2 +1,9 @@
-﻿  GraphicsEngine.cpp
+﻿  DeviceContext.cpp
+  Display.cpp
+  GraphicsDevice.cpp
+  GraphicsEngine.cpp
+  GraphicsPipelineState.cpp
+  ShaderBinary.cpp
+  SwapChain.cpp
+  VertexBuffer.cpp
   Cplus3Dpractice.vcxproj -> C:\Users\tyler\Desktop\ProjectCplusPractice\Cplus3Dpractice\Cplus3Dpractice\Bin\x64\Debug\Cplus3Dpractice.exe
