@@ -26,14 +26,16 @@ dx3d::GraphicsEngine::GraphicsEngine(const GraphicsEngineDesc& desc): Base(desc.
 	//rho string literal preserves characters as written. you can use R"()" between the () you can write the actual code
 	//within the code blocks the vsmain is the entry point for vertex shaders and ps main is for pixel shader
 	//the semantic sv_position is needed semantic are needed for the GPU
+	//the pixel shader controls the color that is written for the pixels
 	constexpr char shaderSourceCode[] =
 		R"(
 		float4 VSMain(float3 pos: POSITION): SV_Position
 		{
 		return float4(pos.xyz, 1.0);
 		}
-		void PSMain()
+		float4 PSMain(): SV_Target
 		{
+		return float4(1.0,1.0,1.0,1.0);
 		}
 		)";
 	constexpr char shaderSourceName[] = "Basic";
