@@ -2,6 +2,7 @@
 #include "GraphicsDevice.h"
 #include "DeviceContext.h"
 #include "SwapChain.h"
+#include "Vec3.h"
 
 using namespace dx3d;
 
@@ -23,11 +24,15 @@ dx3d::GraphicsEngine::GraphicsEngine(const GraphicsEngineDesc& desc): Base(desc.
 	//using constexpr keyword as it lets the compile calculate at compile time
 	//rho string literal preserves characters as written. you can use R"()" between the () you can write the actual code
 	//within the code blocks the vsmain is the entry point for vertex shaders and ps main is for pixel shader
+	//the semantic sv_position is needed semantic are needed for the GPU
 	constexpr char shaderSourceCode[] =
 		R"(
-		void VSMain(){
+		float4 VSMain(float3 pos: POSITION): SV_Position
+		{
+		return float4(pos.xyz, 1.0);
 		}
-		void PSMain(){
+		void PSMain()
+		{
 		}
 		)";
 	constexpr char shaderSourceName[] = "Basic";
@@ -41,6 +46,15 @@ dx3d::GraphicsEngine::GraphicsEngine(const GraphicsEngineDesc& desc): Base(desc.
 		"PSMain",ShaderType::PixelShader });
 
 	m_pipeline = device.createGraphicsPipelineState({ *vs,*ps });
+
+	//these values represent each point on screen and should be between 0 and 1 or -1 and 0 
+	const Vec3 vertexList[] = {
+		{-0.5f,-0.5f,0.0f},
+		{0.0f,0.5f,0.0f},
+		{0.5f,-0.5f,0.0f}
+	};
+	//just the size of the class in bytes for that last one
+	m_vb = device.createVertexBuffer({vertexList,std::size(vertexList),sizeof(Vec3)});
 }
 
 dx3d::GraphicsEngine::~GraphicsEngine()
@@ -58,7 +72,9 @@ void dx3d::GraphicsEngine::render(SwapChain& swapChain)
 	//setting to red
 	context.clearAndSetBackBuffer(swapChain, { 1,0,0,1 });
 	context.setGraphicsPipelineState(*m_pipeline);
-
+	//input stage
+	auto& vb = *m_vb;
+	context.setVertexBuffer(vb);
 
 	auto& device = *m_graphicsDevice;
 	device.executeCommandList(context);

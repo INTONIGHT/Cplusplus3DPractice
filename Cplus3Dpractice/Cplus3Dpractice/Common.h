@@ -51,6 +51,12 @@ namespace dx3d {
 		const ShaderBinary& ps;
 	};
 
+	struct VertexBufferDesc {
+		const void* vertexList{};
+		ui32 vertexListSize{};
+		ui32 vertexSize{};
+	};
+
 	struct GameDesc {
 		Logger::LogLevel logLevel = Logger::LogLevel::Error;
 	};

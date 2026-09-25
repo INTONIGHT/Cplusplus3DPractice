@@ -1,6 +1,7 @@
 #include "DeviceContext.h"
 #include "SwapChain.h"
 #include "GraphicsPipelineState.h"
+#include "VertexBuffer.h"
 
 dx3d::DeviceContext::DeviceContext(const GraphicsResourceDesc& gDesc): GraphicsResource(gDesc)
 {
@@ -30,4 +31,13 @@ void dx3d::DeviceContext::setGraphicsPipelineState(const GraphicsPipelineState& 
 	m_context->VSSetShader(pipeline.m_vs.Get(), nullptr, 0);
 	m_context->PSSetShader(pipeline.m_ps.Get(), nullptr, 0);
 
+}
+
+void dx3d::DeviceContext::setVertexBuffer(const VertexBuffer& buffer)
+{
+	auto stride = buffer.m_vertexSize;
+	auto buf = buffer.m_buffer.Get();
+	auto offset = 0u;
+	//how to tell the gpu where the buffer data is stored and interpret it
+	m_context->IASetVertexBuffers(0, 1, &buf, &stride, &offset);
 }

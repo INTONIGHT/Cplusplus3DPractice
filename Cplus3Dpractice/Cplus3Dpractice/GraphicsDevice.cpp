@@ -4,6 +4,7 @@
 #include "DeviceContext.h"
 #include "ShaderBinary.h"
 #include "GraphicsPipelineState.h"
+#include "VertexBuffer.h"
 
 using namespace dx3d;
 //note its not always ideal to use using namespace especially in header files it can cause name collisions
@@ -64,6 +65,11 @@ ShaderBinaryPtr dx3d::GraphicsDevice::compileShader(const ShaderCompileDesc& des
 GraphicsPipelineStatePtr dx3d::GraphicsDevice::createGraphicsPipelineState(const GraphicsPipelineStateDesc& desc)
 {
 	return std::make_shared<GraphicsPipelineState>(desc, getGraphicsResourceDesc());
+}
+
+VertexBufferPtr dx3d::GraphicsDevice::createVertexBuffer(const VertexBufferDesc& desc)
+{
+	return std::make_shared<VertexBuffer>(desc, getGraphicsResourceDesc());
 }
 
 void dx3d::GraphicsDevice::executeCommandList(DeviceContext& context)

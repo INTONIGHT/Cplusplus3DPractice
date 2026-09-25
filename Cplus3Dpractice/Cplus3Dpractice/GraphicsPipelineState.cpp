@@ -14,6 +14,8 @@ dx3d::GraphicsPipelineState::GraphicsPipelineState(const GraphicsPipelineStateDe
 	//vertex shader then pixel shader being loaded in
 	auto vs = desc.vs.getData();
 	auto ps = desc.ps.getData();
+
+
 	
 	DX3DGraphicsLogThrowOnFail(m_device.CreateVertexShader(vs.data, vs.dataSize, nullptr, &m_vs),
 		"CreateVertexShader failed");
