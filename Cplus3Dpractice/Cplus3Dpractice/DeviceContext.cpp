@@ -53,3 +53,10 @@ void dx3d::DeviceContext::setViewportSize(const Rect& size)
 
 	m_context->RSSetViewports(1, &vp);
 }
+
+void dx3d::DeviceContext::drawTriangleList(ui32 vertexCount, ui32 startVertexLocation)
+{
+	//how the GPU should interpret the vertex list
+	m_context->IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
+	m_context->Draw(vertexCount, startVertexLocation);
+}

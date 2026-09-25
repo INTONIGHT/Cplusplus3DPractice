@@ -3,6 +3,7 @@
 #include "DeviceContext.h"
 #include "SwapChain.h"
 #include "Vec3.h"
+#include "VertexBuffer.h"
 
 using namespace dx3d;
 
@@ -77,6 +78,8 @@ void dx3d::GraphicsEngine::render(SwapChain& swapChain)
 	//input stage
 	auto& vb = *m_vb;
 	context.setVertexBuffer(vb);
+	//can only be called after the pipeline is set
+	context.drawTriangleList(vb.getVertexListSize(), 0u);
 
 	auto& device = *m_graphicsDevice;
 	device.executeCommandList(context);

@@ -102,6 +102,9 @@
     <ClCompile Include="GraphicsPipelineState.cpp">
       <Filter>DX3D\Source\DX3D\Graphics</Filter>
     </ClCompile>
+    <ClCompile Include="VertexBuffer.cpp">
+      <Filter>DX3D\Source\DX3D\Graphics</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Readme.md">
@@ -165,6 +168,12 @@
     </ClInclude>
     <ClInclude Include="GraphicsPipelineState.h">
       <Filter>DX3D\Source\DX3D\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="VertexBuffer.h">
+      <Filter>DX3D\Source\DX3D\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Vec3.h">
+      <Filter>DX3D\Include\Math</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
